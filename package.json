@@ -1,0 +1,36 @@
+{
+  "name": "aglcodechallenge",
+  "version": "0.0.0",
+  "description": "AGL Code Challenge",
+  "devDependencies": {
+    "bootstrap": "^3.3.4",
+    "git": "^0.1.5",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-exec": "^0.4.6",
+    "grunt-karma": "^0.12.1",
+    "jasmine-core": "^2.3.4",
+    "jshint-stylish": "^2.1.0",
+    "karma": "^0.13.15",
+    "karma-cli": "^0.1.1",
+    "karma-coverage": "^0.3.1",
+    "karma-jasmine": "^0.3.5",
+    "karma-junit-reporter": "^0.2.2",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "phantomjs": "^1.9.17"
+  },
+  "scripts": {
+    "pretest": "npm install",
+    "test": "node node_modules/karma-cli/bin/karma start karma.debug.conf.js --auto-watch",
+    "precoverage-test": "npm install",
+    "coverage-test": "node node_modules/karma-cli/bin/karma start karma.coverage.conf.js --auto-watch",
+    "prebamboo-ci-test": "npm install",
+    "bamboo-ci-test": "node node_modules/karma-cli/bin/karma start karma.conf.js  --single-run"
+  }
+}

@@ -1,0 +1,27 @@
+﻿@Scripts.Render("~/Scripts/angular.min.js")
+@Scripts.Render("~/Scripts/lodash.min.js")
+
+@Scripts.Render("~/App/home/homeController.js")
+@Scripts.Render("~/App/services/dataService.js")
+
+<br/>
+
+<div ng-app="aglCodeChallenge" ng-controller="homeController">
+
+    <b>{{name}}</b><br/><br/>
+
+    <b>Male:</b>
+    <ul>
+        <li ng-repeat="g in groupedData.Male">
+            {{g.petName}}
+        </li>
+    </ul>
+    
+
+    <b>Female:</b>
+    <ul>
+        <li ng-repeat="g in groupedData.Female">
+            {{g.petName}}
+        </li>
+    </ul>
+</div>
